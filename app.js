@@ -9,6 +9,7 @@ app.use('/', router);
 
 // base URLs
 app.use("/candidate", require("./routes/candidateRouts"));
+app.use('/testScore',require('./routes/testScoreRouts'))
 
 
 
@@ -17,7 +18,7 @@ app.listen(PORT, () => {
     console.log(`server listening on ${PORT}`);
 })
 
-// URL List
+//api URL List
 
 console.log("                                                                     ");
 
@@ -25,10 +26,18 @@ console.log("POST candidate data inserting  ..........." + "/candidate");
 
 console.log("                                                                     ");
 
-console.log("Get all candidate highest score data................/candidate/highestScore")
+console.log("POST candidate score inserting  ..........." + "/testScore");
 
 console.log("                                                                     ");
-console.log("Get all candidate avrage score data............... /candidate/avrageScore");
+console.log("PUT candidate updting score  ..........." + "/testScore/addTestScore");
+
+console.log("                                                                     ");
+
+
+console.log("Get all candidate highest score data................/testScore/highestScore")
+
+console.log("                                                                     ");
+console.log("Get all candidate avrage score data............... /testScore/avrageScore");
 
 console.log("                                                                     ");
 
